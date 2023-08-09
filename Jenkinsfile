@@ -1,10 +1,16 @@
 pipeline {
   agent any 
   stages {
-    stage ('Init') {
+    stage ('Checkout') {
       steps { 
-        echo 'Hi this is demo pipe'
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vennilavan12/pipelinedemo.git']])
       }
     }
+    stage ('Build') {
+      steps {
+        git branch: 'main', url: 'https://github.com/Vennilavan12/pipelinedemo.git'
+        sh 'python3 HELLO.py' 
+      }
+    }   
   }
 }
