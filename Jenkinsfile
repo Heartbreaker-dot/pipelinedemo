@@ -1,5 +1,10 @@
 pipeline {
   agent any 
+   environment {
+    dockerImage=''
+    DOCKERHUB_CREDENTIALS = credentials('docker')
+    registry='vennilavan/python'
+  } 
   stages {
     stage ('Checkout') {
       steps { 
