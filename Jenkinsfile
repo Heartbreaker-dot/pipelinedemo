@@ -3,7 +3,7 @@ pipeline {
    environment {
     dockerImage=''
     DOCKERHUB_CREDENTIALS = credentials('docker')
-    registry='vennilavan12/pipelinedemo'
+    registry='vennilavan/python'
   } 
   stages {
     stage ('Checkout') {
