@@ -9,8 +9,8 @@ pipeline {
     }
     stage ('Build') {
       steps {
-        git branch: 'main', url: 'https://github.com/Vennilavan12/pipelinedemo.git'
-        sh 'python3 HELLO.py' 
+        script {
+          dockerImage = docker.build registry
       }
     }   
   }
