@@ -4,6 +4,6 @@ LABEL Version="1"
 
 LABEL maintaner="vennilavan"
 
-ADD myscript.py /root
+ADD HELLO.py /root
 
-CMD [ "python","./myscript.py" ]
+CMD [ "python","./HELLO.py" ]
