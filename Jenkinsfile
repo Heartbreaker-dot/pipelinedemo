@@ -2,7 +2,7 @@ pipeline {
   agent any 
    environment {
     dockerImage=''
-    DOCKERHUB_CREDENTIALS = credentials('docker')
+    DOCKERHUB_CREDENTIALS = 'docker'
     registry="vennilavan/python"
   } 
   stages {
