@@ -19,14 +19,6 @@ pipeline {
         }
       }
     }
-    stage ('Push Image to Dockerhub') {
-      steps {  
-        script {
-          docker.withRegistry('', DOCKERHUB_CREDENTIALS ) {
-            dockerImage.push()
-          }
-        } 
-      }
-    }
+   
   }
 }
