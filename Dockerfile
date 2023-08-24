@@ -4,10 +4,6 @@ LABEL Version="1"
 
 LABEL maintaner="vennilavan"
 
-ADD HELLO.py /home/ubuntu
-
-MKDIR /home/ubuntu
-
-WORKDIR /home/ubuntu
+ADD HELLO.py .
 
 CMD [ "python","./HELLO.py" ]
