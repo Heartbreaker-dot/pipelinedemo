@@ -6,6 +6,8 @@ LABEL maintaner="vennilavan"
 
 ADD HELLO.py /home/ubuntu
 
+MKDIR /home/ubuntu
+
 WORKDIR /home/ubuntu
 
 CMD [ "python","./HELLO.py" ]
